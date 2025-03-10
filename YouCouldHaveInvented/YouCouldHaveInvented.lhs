@@ -57,7 +57,7 @@ Writing introductions to monads seems to have developed into an industry. There'
 But all of these introduce monads as something esoteric in need of explanation. But what I want to argue is that they aren't esoteric at all. In fact, faced with various problems in functional programming you would have been led, inexorably, to certain solutions, all of which are examples of monads. In fact, I hope to get you to invent them now if you haven't already. It's then a small step to notice that all of these solutions are in fact the same solution in disguise. And after reading this, you might be in a better position to understand other documents on monads because you'll recognise everything you see as something you've already invented.
 
 
-Many of the problems that monads try to solve are related to the issue of side effects. So we'll start with them. (Note that monads let you do more than handle side-effects, in particular many types of container object can be viewed as monads. Some of the introductions to monads find it hard to reconcile these two different uses of monads and concentrate on just one or the other.)
+Many of the problems that monads try to solve are related to the issue of side effects. So we'll start with them. (Note that monads let you do more than handle side-effects, in particular many types of container objects can be viewed as monads. Some of the introductions to monads find it hard to reconcile these two different uses of monads and concentrate on just one or the other.)
 
 
 \section{Side Effects: Debugging Pure Functions}
@@ -139,7 +139,7 @@ Believe it or not, by carrying out those two exercises you have defined your fir
 
 
 \section{A Container: Multivalued Functions}
-Consider the the functions @sqrt@ and @cbrt@ that compute the square root and cube root, respectively, of a real number. These are straightforward functions of type @Float -> Float@ (although @sqrt@ will thrown an exception for negative arguments, something we'll ignore).
+Consider the functions @sqrt@ and @cbrt@ that compute the square root and cube root, respectively, of a real number. These are straightforward functions of type @Float -> Float@ (although @sqrt@ will throw an exception for negative arguments, something we'll ignore).
 
 
 Now consider a version of these functions that works with complex numbers. Every complex number, besides zero, has two square roots. Similarly, every non-zero complex number has three cube roots. So we'd like @sqrt'@ and @cbrt'@ to return lists of values. In other words, we'd like
